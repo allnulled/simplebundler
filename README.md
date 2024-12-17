@@ -36,5 +36,3 @@ require(__dirname + "/simplebundler.js").bundle({
     ignore: ["only-browser.js"],
 });
 ```
-
-# simplebundler
