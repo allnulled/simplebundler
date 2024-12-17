@@ -13,10 +13,10 @@ npm i -g @allnulled/simplebundler
 ```sh
 simplebundler
   --dir directory
-  --outputFile dist/file.js
-  --ignoreFiles file4.js file7.js file9.js
-  --globalId MyCoolAPI
-  --exportAsModule false
+  --output dist/file.js
+  --ignore file4.js file7.js file9.js
+  --id MyCoolAPI
+  --module false
 ```
 
 ## Usage by API
@@ -24,16 +24,16 @@ simplebundler
 ```js
 require(__dirname + "/simplebundler.js").bundle({
     dir: "test/lib1",
-    outputFile: "test/lib1.browser.js",
-    exportAsModule: true,
-    globalId: "Lib1",
-    ignoredFiles: [],
+    output: "test/lib1.browser.js",
+    module: true,
+    id: "Lib1",
+    ignore: [],
 }).bundle({
     dir: "test/lib1",
-    outputFile: "test/lib1.node.js",
-    exportAsModule: true,
-    globalId: "Lib1",
-    ignoredFiles: ["only-browser.js"],
+    output: "test/lib1.node.js",
+    module: true,
+    id: "Lib1",
+    ignore: ["only-browser.js"],
 });
 ```
 
